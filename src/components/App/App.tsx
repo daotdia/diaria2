@@ -11,17 +11,21 @@ interface AppProps { }
 
 const App: FC<AppProps> = () => {
 
-   const { actualEntry, addEntrys } = useContext(DiaryContext);
+   const { actualEntry, addEntrys, setIsFetching } = useContext(DiaryContext);
 
    useEffect(() => {
+      setIsFetching(true)
       const fetchData = async () => {
          try {
             await fetchEntrys("test")
                .then((items) => {
-                  addEntrys(items)
+                  const sortItems = items.sort((a, b) => new Date(Number(b.fecha)).getTime() - new Date(Number(a.fecha)).getTime());
+                  addEntrys(sortItems)
                })
+            setIsFetching(false)
          } catch (error) {
             console.error(error);
+            setIsFetching(false)
          }
       };
 

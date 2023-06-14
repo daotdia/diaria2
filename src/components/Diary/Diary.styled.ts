@@ -1,22 +1,27 @@
 import styled from 'styled-components'
 
-export const DiariButton = styled.button`
+export const DiariButton = styled.button<{disabled:boolean}>`
   position: absolute; /* Hace que el botón sea flotante */
   display: flex;
   align-items: center;
   bottom: 46px; /* Posición en la esquina inferior derecha */
   right: 46px;
   padding: 12px;
-  background-color: #7bff;
+  background-color: #424242;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   visibility: hidden;
 
-  &:hover {
-    background-color: #0045b3;
-  }
+   ${({ disabled }) =>
+    !disabled &&
+    `
+    &:hover {
+      background-color: #d4d4d4;
+      color: #424242;
+    }
+  `}
 `
 
 export const DiaryWrapper = styled.div`
@@ -64,3 +69,11 @@ export const EditorWrapper = styled.textarea`
     color: transparent;
   }
 `
+
+export const SpinnerDiari = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
+

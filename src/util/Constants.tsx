@@ -1,0 +1,1 @@
+export const OPENAI_TOKEN = "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"

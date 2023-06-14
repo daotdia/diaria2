@@ -2,9 +2,10 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import { Entry } from '../../models/interfaces/Entry';
 import { entryToJson, jsonToEntry } from '../../services/parsers';
+import { OPENAI_TOKEN } from '../../util/Constants';
 
 export const handleSave = async (entry: Entry): Promise<Entry> => {
-   const openAIToken = "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"
+   const openAIToken = OPENAI_TOKEN
    try {
       entry.id = uuidv4()
       if (!entry.id_user || !(entry.id_user.length > 0)) {

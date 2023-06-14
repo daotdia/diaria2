@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const SideBarContainer = styled.div`
+  min-width: 220px;
   max-width: 320px;
   max-height: 93vh;
-  flex-grow: 1;
-  background-color: #757575;
+  background-color: #808080;
   overflow-y: auto; 
   display: flex;
   flex-direction: column;
@@ -12,21 +12,28 @@ export const SideBarContainer = styled.div`
     margin-top: 0px; /* Margen superior solo para el primer elemento */
   }
 `
-export const ListItem = styled.div<{ isEven: boolean }>`
+
+export const ListItem = styled.div<{ isEven: boolean, isActual:boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 12px;
-  padding: 1em;
+  min-height: 12px;
+  padding: 0.25em;
   cursor: pointer;
-  background-color: ${props => props.isEven ? '#454545' : '#505050'};
+  background-color: ${
+    props => props.isActual ? '#686868' : (props.isEven ? '#454545' : '#505050')
+  };
 
   &:hover {
     background-color: #404040;
   }
 `
 
-export const ItemContent = styled.div`
+
+
+
+
+export const ItemContent= styled.div`
   display: flex;
   align-items: center;
 `
@@ -50,5 +57,5 @@ export const Divaux = styled.div`
 
 export const ItemDate = styled.span`
   font-size: 0.73em; // Cambia este valor al tamaño de fuente deseado
-  color: #8d9cb9; // Cambia este valor al color deseado
+  color: #a1a1a1; // Cambia este valor al color deseado
 `;

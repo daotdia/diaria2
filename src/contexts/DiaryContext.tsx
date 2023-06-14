@@ -7,8 +7,11 @@ interface DiaryContextProps {
   entries: Array<Entry> | []
   addEntry: (entry: Entry) => void
   addEntrys: (entries: Entry[]) => void
+  replaceEntrys: (entries: Entry[]) => void
   newEntryLoading: boolean
   setNewEntryLoading: (loading: boolean) => void
+  isFetching: boolean
+  setIsFetching: (isFetch: boolean) => void
 }
 
 export const DiaryContext = createContext<DiaryContextProps>({
@@ -17,9 +20,11 @@ export const DiaryContext = createContext<DiaryContextProps>({
   addActualEntry: () => { },
   addEntry: () => { },
   addEntrys: () => { },
+  replaceEntrys: () => { },
   newEntryLoading: false,
-  setNewEntryLoading: () => { }
-  // Agrega más funciones por defecto aquí...
+  setNewEntryLoading: () => { },
+  isFetching: false,
+  setIsFetching: () => { }
 })
 
 interface DiaryProviderProps {
@@ -30,6 +35,7 @@ export const DiaryProvider: React.FC<DiaryProviderProps> = ({ children }) => {
   const [actualEntry, setActualEntry] = useState<Entry>(undefined)
   const [entries, setEntries] = useState<Entry[]>([])
   const [newEntryLoading, invertLoading] = useState(false)
+  const [isFetching, invertFetch] = useState(false)
 
   const addActualEntry = (entry: Entry): void => {
     setActualEntry(entry)
@@ -47,6 +53,14 @@ export const DiaryProvider: React.FC<DiaryProviderProps> = ({ children }) => {
     invertLoading(loading)
   }
 
+  const setIsFetching = (isFetch: boolean) => {
+    invertFetch(isFetch)
+  }
+
+  const replaceEntrys = (entries: Entry[]) => {
+    setEntries(entries)
+  }
+
   return (
     <DiaryContext.Provider value={{
       actualEntry,
@@ -54,8 +68,11 @@ export const DiaryProvider: React.FC<DiaryProviderProps> = ({ children }) => {
       entries,
       addEntry,
       addEntrys,
+      replaceEntrys,
       newEntryLoading,
-      setNewEntryLoading
+      setNewEntryLoading,
+      isFetching,
+      setIsFetching
     }}>
       {children}
     </DiaryContext.Provider>

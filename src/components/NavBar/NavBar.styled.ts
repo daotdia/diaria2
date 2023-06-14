@@ -13,8 +13,14 @@ export const Title = styled.h1`
   font-size: 1.5em;
 `
 
-export const LoginIconContainer = styled.div`
+export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 28px;
+
+  &:hover {
+      color: #888888; /* Cambia el color al pasar el cursor */
+      transform: scale(1.1); /* Aumenta un poco el tamaño */
+    }
 `

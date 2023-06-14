@@ -51,3 +51,10 @@ export const Content = styled.p`
   font-size: 16px;
   color: #8d8d8d;
 `;
+
+export const Fecha = styled.p`
+  /* Estilos personalizados para el contenido */
+  font-size: 14px;
+  text-align: end;
+  color: #504d4d;
+`;
