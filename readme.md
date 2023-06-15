@@ -12,15 +12,15 @@ Es una aplicación web para que guardes tus entradas de diario. Te permite obten
 
 Escribe tu entrada de diario y darle a guardar.
 
-[![diaria1](diaria1 "diaria1")](https://i.ibb.co/g3KkrkJ/Captura-desde-2023-06-15-22-17-02.png "diaria1")
+![diaria1](https://i.ibb.co/g3KkrkJ/Captura-desde-2023-06-15-22-17-02.png)
 
 Aparecerá tu entrada con un resumen y un título. Puedes eliminarla en cualquier momento clicando en la papelera de la entrada.
 
-[![diaria2](diaria2 "diaria2")](https://i.ibb.co/hBP4hQW/Captura-desde-2023-06-15-22-17-36.png "diaria2")
+![diaria2](https://i.ibb.co/hBP4hQW/Captura-desde-2023-06-15-22-17-36.png)
 
 Haz click al botón del robot para poder hacer la pregunta que quieras y la IA te responderá.
 
-[![diaria3](diaria3 "diaria3")](https://i.ibb.co/5nwwbMW/Captura-desde-2023-06-15-22-22-52.png "diaria3")
+![diaria3](https://i.ibb.co/5nwwbMW/Captura-desde-2023-06-15-22-22-52.png)
 
 ## Metas.
 
