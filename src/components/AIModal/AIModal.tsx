@@ -4,6 +4,8 @@ import { ModalWrapper, ModalTitle, ModalInput, ButtonWrapper, ExampleQuestionTag
 import { putQuestion } from './AIModalController';
 import ClipLoader from 'react-spinners/ClipLoader';
 
+Modal.setAppElement('#root');
+
 const AskModal = ({ isOpen, onRequestClose }) => {
    const [question, setQuestion] = useState("")
    const [iaResponse, setIaResponse] = useState(null)
@@ -16,7 +18,6 @@ const AskModal = ({ isOpen, onRequestClose }) => {
       "¿Crees que voy por el buen camino para conseguir mi objetivo?",
       "Cuenta cuantas veces he comentado lo feliz que estoy",
       '¿Cuales han sido mis sentimientos?'
-      // Agrega todas las preguntas de ejemplo que desees
    ];
 
    const handleQuestionChange = (e) => {
@@ -41,7 +42,7 @@ const AskModal = ({ isOpen, onRequestClose }) => {
             content: {
                width: '50%',
                margin: '10% auto',
-               background: '#e6e6e6',
+               background: '#e9e6e6d7',
                position: 'relative',
                display: 'flex',
                flexDirection: 'column',

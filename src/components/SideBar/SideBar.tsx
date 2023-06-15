@@ -7,7 +7,6 @@ import { formatDate } from '../../util/Time'
 import { ClipLoader } from 'react-spinners'
 import { SpinnerWrapper } from '../AIModal/AIModal.styled'
 import { deleteEntry } from './SideBarController'
-import { id } from 'date-fns/locale'
 
 
 interface SideBarProps { }

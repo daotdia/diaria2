@@ -1,4 +1,3 @@
-// NavBar.jsx
 import { FC, useState } from 'react';
 import { FaRobot, FaUser } from 'react-icons/fa';
 import AskModal from '../AIModal/AIModal';

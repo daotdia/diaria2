@@ -51,7 +51,7 @@ export const EditorWrapper = styled.textarea`
 
   &:focus{
     box-shadow: 0 0 8px rgba(128, 128, 128, 0.5); 
-    border: 1px solid #808080; /* Borde gris */
+    border: 1px solid #808080;
     border-radius: 8px;
   }
   &:hover { 
@@ -61,7 +61,7 @@ export const EditorWrapper = styled.textarea`
         font-style: italic;
     }
     box-shadow: 0 0 8px rgba(128, 128, 128, 0.5); 
-    border: 1px solid #808080; /* Borde gris */
+    border: 1px solid #808080; 
     border-radius: 8px;
   }
 

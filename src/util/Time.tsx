@@ -7,7 +7,7 @@ interface myDate {
 }
 
 export const formatDate = (dateMs: string): myDate => {
-   const date = new Date(Number(dateMs)); // Convertir el timestamp a un objeto Date.
+   const date = new Date(Number(dateMs));
    const formattedDate = format(date, 'dd/MM/yy', { locale: es });
    const formattedTime = format(date, '(HH:mm)', { locale: es });
 

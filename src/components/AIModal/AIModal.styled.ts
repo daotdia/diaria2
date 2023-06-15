@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// Estilos personalizados
 export const ModalWrapper = styled.div`
   height: 100%; 
   display: flex;
@@ -58,7 +57,7 @@ export const EnviarButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  width: 80px; // Ancho de los botones
+  width: 80px; 
 
   &:hover {
     background-color: #b4caad;
@@ -74,7 +73,7 @@ export const CancelarButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  width: 80px; // Ancho de los botones
+  width: 80px; 
 
   &:hover {
     background-color: #d4aeae;
@@ -109,7 +108,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const SVG = styled.svg`
-  fill: #555555; // Esto establece el color a negro
+  fill: #555555; 
   width: 24px;
   height: 24px;
   align-items: center;

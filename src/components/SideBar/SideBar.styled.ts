@@ -29,10 +29,6 @@ export const ListItem = styled.div<{ isEven: boolean, isActual:boolean }>`
   }
 `
 
-
-
-
-
 export const ItemContent= styled.div`
   display: flex;
   align-items: center;
@@ -56,6 +52,7 @@ export const Divaux = styled.div`
 `
 
 export const ItemDate = styled.span`
-  font-size: 0.73em; // Cambia este valor al tamaño de fuente deseado
-  color: #a1a1a1; // Cambia este valor al color deseado
+  font-size: 0.73em;
+  color: #a1a1a1;
+  margin-left: 8px;
 `;

@@ -1,5 +1,5 @@
 import React, { type ReactNode, createContext, useState } from 'react'
-import { type Entry } from '../models/interfaces/Entry' // Importa tu modelo Entry
+import { type Entry } from '../models/interfaces/Entry'
 
 interface DiaryContextProps {
   actualEntry: Entry | undefined

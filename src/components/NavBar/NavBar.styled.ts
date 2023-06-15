@@ -20,7 +20,7 @@ export const IconContainer = styled.div`
   gap: 28px;
 
   &:hover {
-      color: #888888; /* Cambia el color al pasar el cursor */
+      color: #888888; 
       transform: scale(1.1); /* Aumenta un poco el tamaño */
     }
 `

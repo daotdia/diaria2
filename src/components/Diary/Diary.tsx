@@ -29,7 +29,7 @@ const Diary: FC<DiaryProps> = () => {
       if (newEntry !== null) {
          setNewEntryLoading(false)
          addEntry(newEntry)
-         textAreaRef.current.value = ''  // esto limpiará el contenido del textarea
+         textAreaRef.current.value = ''
       }
    }
 
